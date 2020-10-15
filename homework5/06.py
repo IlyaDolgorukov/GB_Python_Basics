@@ -13,5 +13,10 @@ for line in text:
     data = line.split()
     name = data.pop(0).replace(':', '')
     val = 0
+    for part in data:
+        num = part.split('(').pop(0)
+        if num.isdigit():
+            val += int(num)
+    result[name] = val
 
-# Дальше не успел...
+print(result)
