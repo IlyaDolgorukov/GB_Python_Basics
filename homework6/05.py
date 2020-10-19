@@ -14,32 +14,41 @@ class Stationery:
 
 
 class Pen(Stationery):
+    def __init__(self):
+        super().__init__('Ручка')
+
     def draw(self):
-        print('Ручка пишет.')
+        print(f'{self.title} пишет.')
 
 
 class Pencil(Stationery):
+    def __init__(self):
+        super().__init__('Карандаш')
+
     def draw(self):
-        print('Карандаш рисует.')
+        print(f'{self.title} рисует.')
 
 
 class Handle(Stationery):
+    def __init__(self):
+        super().__init__('Маркер')
+
     def draw(self):
-        print('Маркер выделяет текст.')
+        print(f'{self.title} выделяет текст.')
 
 
 stylus = Stationery('Стилус')
 stylus.draw()
 print()
 
-pen = Pen('Ручка')
+pen = Pen()
 pen.draw()
 print()
 
-pencil = Pencil('Карандаш')
+pencil = Pencil()
 pencil.draw()
 print()
 
-handle = Handle('Маркер')
+handle = Handle()
 handle.draw()
 print()
